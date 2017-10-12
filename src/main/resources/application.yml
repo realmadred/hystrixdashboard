@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-dashboard
+server:
+  port: 9001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+#聚合多个才使用turbine
+turbine:
+  appConfig: spring-cloud-consume,spring-cloud-consume2
+  clusterNameExpression: new String("default")
+
